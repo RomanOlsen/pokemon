@@ -11,7 +11,7 @@ export class PokemonController {
   }
 
   drawActivePokemon() {
-    document.getElementById('activePoke')
+    document.getElementById('activePoke').innerHTML = AppState.activePokemon.HTML
   }
 
   async getPokes() {

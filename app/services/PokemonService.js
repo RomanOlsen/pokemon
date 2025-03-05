@@ -1,5 +1,5 @@
 import { AppState } from "../AppState.js";
-import { Pokemon } from "../models/Pokemon.js";
+import { ActivePokemon, Pokemon } from "../models/Pokemon.js";
 import { pokeApi } from "../utils/Axios.js"
 
 class PokemonService {
@@ -15,7 +15,9 @@ class PokemonService {
   async setActivePokemon(pokeName) {
     const response = await pokeApi.get(`pokemon/${pokeName}`)
     // AppState.pokemons.find()
-    AppState.activePokemon = response
+    AppState.activePokemon = new ActivePokemon(response.data) // remember .data !!!
+    console.log(response);
+
   }
 }
 
