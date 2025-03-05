@@ -25,4 +25,9 @@ export class PokemonController {
 
   }
 
+  setActivePokemon(pokeName) {
+    console.log('setting', pokeName);
+
+  }
+
 }
