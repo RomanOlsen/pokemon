@@ -5,8 +5,13 @@ import { Pop } from "../utils/Pop.js";
 export class PokemonController {
   constructor() {
     AppState.on('pokemons', this.drawPokeList)
+    AppState.on('activePokemon', this.drawActivePokemon)
     // OBSERVERS ^
     this.getPokes()
+  }
+
+  drawActivePokemon() {
+    document.getElementById('activePoke')
   }
 
   async getPokes() {
@@ -27,7 +32,10 @@ export class PokemonController {
 
   setActivePokemon(pokeName) {
     console.log('setting', pokeName);
+    pokemonService.setActivePokemon(pokeName)
 
   }
+
+
 
 }
