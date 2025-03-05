@@ -1,9 +1,8 @@
-import { ExampleController } from './controllers/ExampleController.js';
+import { PokemonController } from "./controllers/PokemonController.js"
 
 class App {
 
-  ExampleController = new ExampleController() // ☑️ you can remove this - example only
-
+  pokemonController = new PokemonController()
 }
 
 window['app'] = new App()
