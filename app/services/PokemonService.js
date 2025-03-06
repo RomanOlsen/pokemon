@@ -1,6 +1,6 @@
 import { AppState } from "../AppState.js";
 import { ActivePokemon, Pokemon } from "../models/Pokemon.js";
-import { pokeApi } from "../utils/Axios.js"
+import { api, pokeApi } from "../utils/Axios.js"
 
 class PokemonService {
 
@@ -19,6 +19,11 @@ class PokemonService {
     console.log(response);
 
   }
+
+  async postPokemon() {
+    const response = await api.post('')
+  }
+
 }
 
 export const pokemonService = new PokemonService()
