@@ -36,6 +36,11 @@ export class PokemonController {
 
   }
 
+  addMyPoke() {
+    console.log('adding!');
+    Pop.toast('Adding', AppState.activePokemon.name)
+
+  }
 
 
 }

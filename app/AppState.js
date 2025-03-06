@@ -4,6 +4,7 @@ import { createObservableProxy } from './utils/ObservableProxy.js'
 class ObservableAppState extends EventEmitter {
   activePokemon = null
   pokemons = []
+  myPokemons = []
 
 
 }

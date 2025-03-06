@@ -41,17 +41,20 @@ export class ActivePokemon extends Pokemon {
   }
 
   get HTML() { //Overwrites past getter
-    return `
-          <div class="card">
+    return /*html*/ `
+          <div class="card text-capitalize">
             <div class="card-header">${this.name}</div>
-            <img class="img-fluid" src="${this.image}" alt="picture">
-            <div class="my-1 ms-2 fs-2">${this.stats1}</div>
+            <div class="d-flex justify-content-between">
+              <img class="img-fluid pokemon-image" src="${this.image}" alt="picture">
+              <button onclick="app.pokemonController.addMyPoke()" class="btn btn-primary text-white m-1">Add to collection</button>
+            </div>
             <div class="my-1 ms-2 fs-2">${this.stats2}</div>
+            <div class="my-1 ms-2 fs-2">${this.stats1}</div>
             <div class="my-1 ms-2 fs-2">${this.stats3}</div>
             <div class="my-1 ms-2 fs-2">${this.stats4}</div>
-            <div class="my-1 ms-2 fs-2">Weight: ${this.weight}</div>
-            <div class="my-1 ms-2 fs-2">Height: ${this.height}</div>
-
+            <div class="my-1 ms-2 fs-2">Weight: ${this.weight} pounds</div>
+            <div class="my-1 ms-2 fs-2">Height: ${this.height} feet</div>
+            
           </div>
         </div>
       </div>
